@@ -7,6 +7,9 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -25,7 +28,9 @@ public class Talktimeplan implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="plan_id")
+	@GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(unique = true,name="plan_id", columnDefinition = "VARCHAR(36)")
 	private String planId;
 
 	private String planname;

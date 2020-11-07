@@ -2,8 +2,8 @@ package com.hcl.net.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.hcl.net.model.UserInformation;
+import com.hcl.net.model.MobileCompanyNumber;
 @Repository
-public interface UserInformationRepository extends JpaRepository<UserInformation,String> {
+public interface MobileNoRepository extends JpaRepository<MobileCompanyNumber,String> {
 
 }
