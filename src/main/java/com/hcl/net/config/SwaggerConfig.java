@@ -39,10 +39,10 @@ public class SwaggerConfig {
 	 @Bean
 	 public ApiInfo apiInfo() {
 
-		return new ApiInfoBuilder().title("API Specification is used for Customer Application comsumed by Mobile  and Web Application")
-				.description("This implementation is used for Customer Mobile and web app ")
-				.termsOfServiceUrl("http://www.Telusinternational.com").license("License of API")
-				.licenseUrl("http://www.Telusinternational.com").version("1.0").build();
+	return new ApiInfoBuilder().title("API Specification is used for Mobile connection service provider  for  Web Application")
+				.description("This implementation is used for  Mobile service provider company only ")
+				.termsOfServiceUrl("http://www.hcl.com").license("License of API")
+				.licenseUrl("http://www.hcl.com").version("1.0").build();
 
 	}
 }
