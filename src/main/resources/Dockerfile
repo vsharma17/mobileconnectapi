@@ -1,25 +1,25 @@
 FROM openjdk:11-jre
 
-MAINTAINER vikas.sharma1@telusinternational.com
+MAINTAINER vikaskrsharma1982@gmail.com
 
 
 
-# Create gigcustomer Service base directory structure
-RUN mkdir -p /com/gigcustomer/app
+# Create mobile connect Service base directory structure
+RUN mkdir -p /com/hcl/net
 
 # Expose 9999
 EXPOSE 9999
 
-# Copy gigcustomer Service boot in to the image
-COPY ./*.jar  /com/gigcustomer/app
+# Copy mobile connect Service boot in to the image
+COPY ./target/*.jar  /com/hcl/net
 
 # Add ENTRYPOINT
-ENTRYPOINT ["java","-jar","./com/gigcustomer/app/gig-customer-service-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","./com/hcl/net/mobileconnect-0.0.1-SNAPSHOT.jar"]
 
 # Set HostName
-ENV HOSTNAME="rpaacceptor"
+ENV HOSTNAME="mobileconnect"
 
-# Make gigcustomer Service as Linux service
-# RUN ln -s /com/gigcustomer/app/initiator-1.0.0..jar /etc/init.d/rpaacceptor
+# Make mobile connect Service as Linux service
+# RUN ln -s /com/hcl/net/mobileconnect-0.0.1-SNAPSHOT /etc/init.d/mobileconnect
 
 

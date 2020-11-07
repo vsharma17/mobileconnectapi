@@ -64,7 +64,7 @@ class UserInformationControllerTest {
 		UserInformation userInfo = new UserInformation();
 		BeanUtils.copyProperties(mockRegistration, userInfo);
 
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/userInfo").accept(MediaType.APPLICATION_JSON)
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.post("http://localhost:9999/mobileconnect/api/v1/userInfomation").accept(MediaType.APPLICATION_JSON)
 				.content(toJson(mockRegistration)).contentType(MediaType.APPLICATION_JSON);
 
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
@@ -73,7 +73,7 @@ class UserInformationControllerTest {
 
 		assertEquals(HttpStatus.CREATED.value(), response.getStatus());
 
-		assertEquals("http://localhost:9999/mobileconnect/api/v1/userInfo", response.getHeader(HttpHeaders.LOCATION));
+		assertEquals("http://localhost:9999/mobileconnect/api/v1/userInfomation", response.getHeader(HttpHeaders.LOCATION));
 	}
 
 	private byte[] toJson(Object r) throws Exception {
