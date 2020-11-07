@@ -11,6 +11,11 @@ public class CustomerAppResponse<T>{
         this.message = message;
         this.result = result;
     }
+    public CustomerAppResponse(int status, String message) {
+        this.status = status;
+        this.message = message;
+
+    }
 
     public int getStatus() {
         return status;

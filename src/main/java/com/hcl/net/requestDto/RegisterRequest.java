@@ -13,8 +13,8 @@ import lombok.ToString;
 public class RegisterRequest {
 	@ApiModelProperty(notes = "Address information", example = "noida")
 	private String address;
-	@ApiModelProperty(notes = "adharcard number  16 digit", example = "2342,3234,4443,2234")
-	private String adharcardno;
+	@ApiModelProperty(notes = "adharcard number  16 digit", example = "2342323444432234")
+	private Integer adharcardno;
 	@ApiModelProperty(notes = "alternative mobile number  10 digit", example = "9934323444")
 	private String alternatemobileno;
 	@ApiModelProperty(notes = "email address", example = "person@gmil.com")

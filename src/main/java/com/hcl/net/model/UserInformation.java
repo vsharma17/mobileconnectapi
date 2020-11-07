@@ -42,7 +42,7 @@ public class UserInformation implements Serializable {
 
 	private String address;
 
-	private String adharcardno;
+	private Integer adharcardno;
 
 	private String alternatemobileno;
 

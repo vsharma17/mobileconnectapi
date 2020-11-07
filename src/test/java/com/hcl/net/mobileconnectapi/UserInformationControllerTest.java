@@ -57,7 +57,8 @@ class UserInformationControllerTest {
 
 	@Test
 	public void testRegisterUser() throws Exception {
-		RegisterRequest mockRegistration = new RegisterRequest("noida", "2342,3234,4443,2234", "9934323444",
+		
+		RegisterRequest mockRegistration = new RegisterRequest("noida", 214748348, "9934323444",
 				"2020-11-07T07:53:45.0664556Z", "BahuMahendra01", "person@gmil.com", false, "xep213c32c22", "9999999",
 				"BahuMahendra01");
 		UserInformation userInfo = new UserInformation();
