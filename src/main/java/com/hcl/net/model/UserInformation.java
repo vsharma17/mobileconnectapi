@@ -1,4 +1,4 @@
-package com.hcl.net.mobileconnectapi.model;
+package com.hcl.net.model;
 
 import lombok.Data;
 import lombok.Getter;

@@ -1,0 +1,85 @@
+server: 
+  port: 9999
+  servlet:
+    context-path: /mobileconect/api/v1
+---
+management:
+    endpoint:
+      shutdown:
+         enable: true
+---
+spring:
+  application:
+    name: mobileconnect
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time-zone: UTC
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/mobileconnectapi
+    username: postgres
+    password: postgres
+    hikari:
+         minimum-idle: 1
+         maximum-pool-size: 5
+         idle-timeout: 10000
+         max-lifetime: 1800000
+         connection-timeout: 20000
+  mail:
+    host: email-smtp.us-east-1.amazonaws.com
+    port: 587
+    username: AKIA5XMSFZGK6QYQKUXB
+    password: BCRcU483awmZe6JSDkgKssNVRzLQYbSyrbkKjf6C1dc0 
+    properties:
+          mail:
+             smtp: 
+              auth: true
+              connectiontimeout: 5000
+              timeout: 5000
+              writetimeout: 5000
+              starttls:
+              enable: true
+              
+              
+              
+GOOGLE_APPLICATION_CREDENTIALS: gs://customerappstorage
+---
+#server:
+     #ssl:
+       #key-store-type: PKCS12
+       #key-store: classpath:GIGCert.p12
+       #key-store-password: 1234567
+       #key-alias: GIGCert
+---
+
+spring:
+  profiles: local
+
+---
+
+
+spring:
+  profiles: dev
+
+---
+
+
+
+spring:
+  profiles: qa
+  
+---
+
+spring:
+  profiles: prod
+  
+
+   
+  
+  
